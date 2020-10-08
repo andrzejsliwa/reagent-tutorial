@@ -1,5 +1,7 @@
 # reagent-tutorial
 
+Based on [Reagent + Re-Frame + Reitit Pro courses](https://www.jacekschae.com/reagent-re-frame-reitit/buy)
+
 ![Screenshot](/screenshot.png?raw=true "Screenshot")
 
 ## Steps 
