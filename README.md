@@ -2,7 +2,7 @@
 
 ## Steps 
 
-  $ npm install
-  $ npx shadow-cljs watch :app
+    $ npm install
+    $ npx shadow-cljs watch :app
 
   
