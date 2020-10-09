@@ -1,6 +1,7 @@
 (ns giggin.components.gigs
   (:require [giggin.state :as state]
-            [giggin.helpers :refer [format-price]]))
+            [giggin.helpers :refer [format-price]]
+            [reagent.core :as r]))
 
 
 (defn add-order
@@ -23,8 +24,14 @@
 
 (defn gigs
   []
-  [:main
-   [:div.gigs
-    (for [gig (vals @state/gigs)]
-      (render-gig gig))]])
-
+  (let [modal (r/atom false)]
+    (fn []
+      [:main
+       [:div.gigs
+        [:button.add-gig
+         {:on-click #(reset! modal true)}
+         [:div.add__title
+          [:i.icon.icon--plus]
+          [:p "Add gig"]]]
+        (for [gig (vals @state/gigs)]
+          (render-gig gig))]])))
